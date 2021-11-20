@@ -1,0 +1,414 @@
+.app {
+    background: var(--background-color);
+}
+
+.header {
+    background: var(--background-container);
+    border-radius: 2rem;
+    z-index: 2;
+    margin-top: 10%;
+    padding: 30px;
+}
+.header__avatar {
+    display: flex;
+    align-items: center;
+}
+.header__avatar-img {
+    margin-top: 13px;
+}
+.header__avatar-img-link {
+    height: 180px;
+    width: 130px;
+    border-radius: 1.8rem;
+    box-shadow: 0px 4px 7px rgb(0 0 0 / 45%);
+}
+
+.header__user {
+    padding-left: 30px;
+}
+.header__user-name {
+    color: var(--text-heading);
+    font-size: 3rem;
+    margin: 0;
+}
+.header__user-work {
+    color: #4b4b52;
+    font-size: 2rem;
+}
+.user__socical-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    
+}
+.user__socical-item {
+    font-size: 1.8rem;
+    margin: 0 8px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.user__socical-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+}
+.facebook:hover a {
+    background-color: #3b5999;
+}
+.instagram:hover a {
+    background-color: #e1306c;
+}
+.github:hover a {
+    background-color: #333;
+}
+.linkedin:hover a {
+    background-color: #0a66c2;
+}
+.facebook:hover a i,
+.instagram:hover a i,
+.github:hover a i,
+.linkedin:hover a i {
+    color: #fff;
+}
+.user__socical-item a i {
+    color: #000;
+}
+.tooltip {
+    background: #fff;
+    box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
+    font-size: 16px;
+    border-radius: 25px;
+    padding: 5px;
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    pointer-events: none;
+}
+.tooltip::after {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+.facebook:hover .tooltip {
+    top: -40px;
+    opacity: 1;
+    color: #fff;
+    background-color: #3b5999;
+    transition: all 0.5s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.facebook:hover .tooltip::after {
+    background-color: #3b5999;
+}
+.instagram:hover .tooltip {
+    top: -40px;
+    opacity: 1;
+    color: #fff;
+    background-color: #e1306c;
+    transition: all 0.5s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.instagram:hover .tooltip::after {
+    background-color: #e1306c;
+}
+.github:hover .tooltip {
+    top: -40px;
+    opacity: 1;
+    color: #fff;
+    background-color: #333;
+    transition: all 0.5s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.github:hover .tooltip::after {
+    background-color: #333;
+}
+.linkedin:hover .tooltip {
+    top: -40px;
+    opacity: 1;
+    color: #fff;
+    background-color: #0a66c2;
+    transition: all 0.5s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.linkedin:hover .tooltip::after {
+    background-color: #0a66c2;
+}
+.header__info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.header__info::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: #bdb9b9;
+    left: -10px;
+}
+.info__contact {
+    font-size: 1.6rem;
+    color: #555;
+    padding: 20px;
+    font-weight: 500;
+}
+.info__contact-name {
+    margin-bottom: 16px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #959393;
+}
+
+.container {
+    margin-top: 40px;
+}
+
+.side__bar {
+    margin: 0;
+    list-style: none;
+    background: var(--background-container);
+    border-radius: 2rem;
+    z-index: 2;
+    padding: 20px 40px;
+}
+.side__bar-item {
+    margin: 16px 0;
+}
+/* .side__bar-click {
+     background-image: linear-gradient( 142.17deg,#4f93f1 6.66%,#de30fd 91.48%);
+    box-shadow: inset -0.25rem -0.25rem 0.3125rem rgb(0 0 0 / 10%), inset 0.25rem 0.25rem 0.3125rem rgb(255 255 255 / 23%);
+} */
+.side__bar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(235, 240, 243, 0.8);
+    border-radius: 16px;
+    height: 11rem;
+}
+.side__bar-content:hover {
+    background-image: linear-gradient( 142.17deg,rgba(79, 147, 241, 0.3) 6.66%,rgba(222, 48, 253, 0.3) 91.48%)
+}
+.side__bar-item a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #456;
+}
+
+.extend {
+    background: var(--background-container);
+    border-radius: 2rem;
+    padding: 40px 30px 30px 30px;
+    margin-bottom: 2%;
+}
+.extend__info {
+    line-height: 1.4;
+}
+.extend__info-title {
+    font-size: 3.5rem;
+    color: #333;
+    font-weight: 900;
+    margin-top: 0;
+    position: relative;
+    display: inline;
+    z-index: 2;
+}
+.extend__info-title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-image: linear-gradient( 142.17deg,#cc2dc4 6.66%,#cead1c 91.48%);
+    bottom: 0;
+    z-index: -1;
+}
+.extend__info-adm {
+    font-size: 1.6rem;
+    color: #000;
+    font-weight: 500;
+}
+.extend__product {
+    margin: 40px 0;
+    line-height: 1.4;
+}
+.extend__product-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.extend__product-item {
+    margin-top: 30px;
+    overflow: hidden;
+    padding: 0 25px;
+}
+
+.product__img {
+    text-decoration: none;
+}
+.product__img-container {
+    max-width: 455px;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+.product__img-link {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.product__img:hover .product__img-link {
+    transform: scale(1.05);
+}
+.name__product {
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #333;
+    margin-top: 16px;
+    display: block;
+}
+
+.extend__inspiration {  
+   max-width: 1000px;
+   position: relative;
+}
+
+.slide__member {
+    background: linear-gradient( to right top, rgb(186, 245, 119), rgb(230, 121, 240) );
+    opacity: 0.9;
+    padding: 30px;
+    display: flex;
+}
+.member__avt {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin-top: 16px;
+}
+.member__avt-link {
+    
+    width: 100%;
+    height: auto;
+}
+.member__text {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.member__text-name {
+    font-size: 3rem;
+    color: #000;
+    margin-bottom: 8px;
+}
+.member__text-sub {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.4;
+}
+/* slide */
+.container__inspiration {
+    overflow: hidden;
+    margin-top: 40px;
+    border-radius: 4rem;
+}
+.slider {
+    width: 500%;
+    display: flex;
+    
+}
+.slider input {
+    display: none;
+}
+.slide {
+    width: calc(100% / 5);
+    transition: 2s;
+}
+.navigation-manual {
+    position: absolute;
+    bottom: -16px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.manual-btn {
+    border: 2px solid #cc2dc4;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child) {
+    margin-right: 8px;
+}
+.manual-btn:hover {
+    background: #cc2dc4;
+}
+#radio1:checked ~ .first {
+    margin-left: 0%;
+}
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+#radio5:checked ~ .first {
+    margin-left: -80%;
+}
+/* auto */
+.navigation-auto {
+    position: absolute;
+    bottom: -16px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.navigation-auto div {
+    border: 2px solid #cc2dc4;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.navigation-auto div:not(:last-child) {
+    margin-right: 8px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: #cc2dc4;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: #cc2dc4;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: #cc2dc4;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background: #cc2dc4;
+}
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+    background: #cc2dc4;
+}
+
+/* end slide */
